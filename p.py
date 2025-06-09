@@ -68,7 +68,7 @@ class Player:
             # Add a simple face
             pygame.draw.circle(screen, BLACK, (self.x + 15, self.y + 10), 2)
             pygame.draw.circle(screen, BLACK, (self.x + 20, self.y + 10), 2)
-            # Simple smile
+            # Simple expression
             pygame.draw.arc(screen, BLACK, (self.x + 12, self.y + 12, 10, 8), 0, 3.14, 1)
 
 class Cat:
@@ -173,7 +173,7 @@ class Building:
     def draw(self, screen, camera_x):
         screen_x = self.world_x - camera_x
         if screen_x < SCREEN_WIDTH + 100 and screen_x + self.width > -100:
-            # Draw building - fix floating by anchoring to ground
+            # Draw building 
             ground_y = 380  # Top of sidewalk
             building_y = ground_y - self.height
             pygame.draw.rect(screen, DARK_GRAY, (screen_x, building_y, self.width, self.height))
